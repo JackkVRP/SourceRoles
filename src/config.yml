@@ -1,8 +1,19 @@
 users:
-  UUID:
-    Role: User
-    Nick:
+
+default_role: default
 
 roles:
+  default:
+    prefix:
+    suffix:
+    chatcolor:
+    namecolor:
+    perms:
+
   owner:
-    namecolor: RED #Assign the color using ChatColor.
+    prefix:  #Leave blank if needed
+    suffix:  #Leave blank if needed
+    namecolor: &4 #Assign the color using &
+    chatcolor:
+    perms:
+      - *

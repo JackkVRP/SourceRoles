@@ -19,7 +19,6 @@ public class Main extends JavaPlugin{
 
         PluginManager pm  = getServer().getPluginManager();
 
-
         final FileConfiguration config = this.getConfig();
 
         // Config

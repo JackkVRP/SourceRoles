@@ -1,7 +1,5 @@
 package space.scripted.main;
 
-import org.bukkit.ChatColor;
-
 import java.util.List;
 
 /**
@@ -34,20 +32,20 @@ public class Role {
         this.suffix = suffix;
     }
 
-    public org.bukkit.ChatColor getNameColor() {
+    public String getNameColor() {
         return NameColor;
     }
 
-    public void setNameColor(org.bukkit.ChatColor nameColor) {
-        NameColor = nameColor;
+    public void setNameColor(String nameColor) {
+        nameColor = nameColor;
     }
 
-    public org.bukkit.ChatColor getChatColor() {
+    public String getChatColor() {
         return ChatColor;
     }
 
-    public void setChatColor(org.bukkit.ChatColor chatColor) {
-        ChatColor = chatColor;
+    public void setChatColor(String chatColor) {
+        chatColor  = chatColor;
     }
 
     public List<String> getPerms() {
@@ -60,8 +58,8 @@ public class Role {
 
     public String prefix;
     public String suffix;
-    public ChatColor NameColor;
-    public ChatColor ChatColor;
+    public String NameColor;
+    public String ChatColor;
     public List<String> perms;
 
 }

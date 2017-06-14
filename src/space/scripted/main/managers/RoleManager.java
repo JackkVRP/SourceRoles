@@ -1,6 +1,5 @@
 package space.scripted.main.managers;
 
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import space.scripted.main.Main;
 import space.scripted.main.Role;
@@ -19,11 +18,20 @@ public class   RoleManager {
 
     static Main plugin;
 
-    public void InitRole(Player p) {
-
+    public void InitRolePlayer(Player p) {
+        if(plugin.getConfig().getString("users") == null) {
+            plugin.getConfig().set("users", p.getUniqueId());
+            plugin.getConfig().set("users." + p.getUniqueId() + ".role", plugin.getConfig().getString("default_role"));
+        }
     }
 
-    public void createRole(String name, String prefix, String suffix, ChatColor namecolor, ChatColor chatcolor, List<String> perms) {
+    public void InitRoleManager() {
+        for(String key : plugin.getConfig().getConfigurationSection("users").getKeys(false)){
+
+        }
+    }
+
+    public void createRole(String name, String prefix, String suffix, String namecolor, String chatcolor, List<String> perms) {
         Role role = new Role();
         role.setName(name);
         role.setPrefix(prefix);

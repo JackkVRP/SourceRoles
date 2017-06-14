@@ -1,7 +1,6 @@
 package space.scripted.main.managers;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -35,14 +34,17 @@ public class ChatManager implements Listener{
 
         // Manage Roles
         Role role = RoleManager.getPlayerRole(e.getPlayer());
-        ChatColor namecolor = role.getNameColor();
-        ChatColor chatcolor = role.getChatColor();
+        String namecolor = role.getNameColor();
+        String chatcolor = role.getChatColor();
         String prefix = role.getPrefix();
         String suffix = role.getSuffix();
+
+        String namecol = colorize(namecolor);
+        String chatcol = colorize(chatcolor);
 
         String chatprefix = colorize(prefix);
         String chatsuffix = colorize(suffix);
 
-        Bukkit.broadcastMessage(chatprefix + namecolor + p.getName() + chatsuffix + " » " + chatcolor + msg);
+        Bukkit.broadcastMessage(chatprefix + namecol + p.getName() + chatsuffix + " » " + chatcol + msg);
     }
 }
