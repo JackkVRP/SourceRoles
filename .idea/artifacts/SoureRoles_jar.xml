@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SoureRoles.jar">
+    <output-path>$USER_HOME$/Desktop/Test Server/plugins</output-path>
+    <root id="archive" name="SoureRoles.jar.jar">
+      <element id="module-output" name="SourceRoles" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+users:
+  UUID:
+    Role: User
+    Nick:
+
+roles:
+  owner:
+    namecolor: RED #Assign the color using ChatColor.
